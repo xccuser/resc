@@ -1,0 +1,101 @@
+乐方(31802543)  14:13:28
+select * from tm_perspectiveview where id=8800000001
+select * from tm_perspectiveviewui tpu where tpu.perspectiveview_id=8800000001 and uitype=1 and ui_id=2
+  菜单
+select * from tm_coolmenu order by id desc for update 
+select * from tm_coolmenu where id in (select ui_id from tm_perspectiveviewui tpu where tpu.perspectiveview_id=8800000001 and uitype=1) and visible=1 for update
+select * from tm_coolmenu for update
+-- 创建view
+select * from tm_view where code in ('misExplorerView_Project','misExplorerView_Timesheet','misHomepageView')
+--创建根explorer
+select * from tm_explorer where id in (select tm_viewexplorer.explorer_id from tm_viewexplorer where view_id in (select id from tm_view where code in ('misExplorerView_Project','misExplorerView_Timesheet','misHomepageView')))
+
+--创建view与根explorer的关系
+select * from tm_viewexplorer where view_id in (select id from tm_view where code in ('misExplorerView_Project','misExplorerView_Timesheet','misHomepageView'))
+
+select * from tm_explorer e where e.parentexplorer_id in (8800000105,
+8800000108,
+8800000666
+)
+select * from tm_explorer e where e.parentexplorer_id=8800000109 and display=1
+select * from tm_action where id=8800000265
+select  * from mm_entity_spec where id=8920100001
+select * from mm_entity_spec where id=6640200001
+select * from mm_entity_spec where id=6640200000
+select * from mm_entity_spec where id=6640000000
+select * from mr_table_spec where spec_id=6640000000
+select * from mr_table_spec where spec_id=6640200001
+--存储位置：8800000184,8800000183,8800000202
+select * from mm_spec_attribute where spec_id in (6640200001,6640000000)
+
+select * from mm_table where id=8800000184
+
+select * from mm_table where id in (8800000183,8800000202)
+select * from mm_dictvalue where id in (1012,1011,1013)
+select * from mr_table_spec where spec_id=8920100001
+
+select * from mm_entity_spec
+
+select * from tm_explorer e where e.parentexplorer_id=8800000106 and display=1
+
+select seq_tm_perspectiveview.nextval from dual --8800000341(oracle序列)
+
+select seq_tm_coolmenu.nextval from dual 8800000149 
+select * from tm_entitytype
+
+
+乐方(31802543)  18:53:14
+--我的订单
+select * from tm_explorer e where e.name='我的订单'
+select * from tm_gridpage where id=8800000248
+select * from tm_entitytemplate where id in (8800000712,8800000713)
+select * from tm_attributetemplate att where att.entitytemplate_id in (8800000712,8800000713)
+select * from tm_entitytemplategroup
+select seq_tm_perspectiveview.nextval from dual --8800000341(oracle序列)
+select seq_tm_coolmenu.nextval from dual 8800000149 
+
+select * from tm_entitytype
+select * from tm_attributetype
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select * from TM_GRIDPAGE where id=8800000148;
+select * from tm_entitytype where id=8820100001;
+select * from TM_ENTITYTYPE where id=8820100000;
+select * from TM_ENTITYTYPE where id=8820000000;
+select * from mr_table_spec where spec_id=8820000000;
+select * from mm_table where id=8800000002;
+select * from CM_PROJECT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
